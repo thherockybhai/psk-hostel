@@ -1,0 +1,29 @@
+name: Download Anodyne Font
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  download-font:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download Anodyne Combined
+        run: |
+          mkdir -p fonts
+          curl -L "https://files.fontsme.com/a/811/14811/file/Anodyne%20Combined.ttf" \
+            -o "fonts/Anodyne-Combined.ttf"
+
+      - name: Commit font
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add fonts/Anodyne-Combined.ttf
+          git diff --cached --quiet || git commit -m "Add Anodyne Combined font"
+          git push
