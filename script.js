@@ -4,7 +4,7 @@ const hero = document.querySelector(".hero");
 const menuToggle = document.querySelector(".menu-toggle");
 const mobileMenu = document.querySelector(".mobile-menu");
 
-const ENTRY_MS = 8000;
+const ENTRY_MS = 4000;
 const SLIDE_MS = 10000;
 const TRANSITION_MS = 2200;
 
