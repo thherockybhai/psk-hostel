@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;500&display=swap');
 
+@font-face {
+  font-family: "Anodyne";
+  src: url("fonts/Anodyne-Combined.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --black: #050505;
   --red: #e10b12;
@@ -215,14 +223,13 @@ body {
 .title {
   margin: 0;
   color: var(--red);
-  font-family: "Bebas Neue", "Arial Narrow", Impact, sans-serif;
+  font-family: "Anodyne", sans-serif;
   font-weight: 400;
-  font-size: clamp(8rem, 15vw, 15.5rem);
-  line-height: 0.72;
-  letter-spacing: -0.025em;
+  font-size: clamp(5rem, 10vw, 10rem);
+  line-height: 0.9;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
-  transform: scaleX(0.68);
-  transform-origin: center;
+  white-space: nowrap;
   opacity: 0;
   transition: opacity 2.5s ease;
   text-shadow: 0 2px 22px rgba(0, 0, 0, 0.24);
@@ -233,7 +240,7 @@ body {
 }
 
 .title span {
-  display: block;
+  display: inline;
 }
 
 .tagline {
@@ -413,10 +420,9 @@ body {
   }
 
   .title {
-    font-size: clamp(6.2rem, 26vw, 10.5rem);
-    transform: scaleX(0.66);
-  }
-
+  font-size: clamp(3.5rem, 14vw, 6rem);
+}
+  
   .tagline {
     width: 92vw;
     margin-top: 1.6rem;
