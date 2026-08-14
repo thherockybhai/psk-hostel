@@ -190,16 +190,12 @@ body {
   transform: translate3d(-50%, -50%, 0);
   text-align: center;
   opacity: 0;
-  scale: .88;
-  transition:
-    opacity 2s var(--ease-cinema),
-    scale 2.2s var(--ease-cinema);
+  transition: opacity 2s ease;
   pointer-events: none;
 }
 
 .title-lockup.is-revealed {
   opacity: 1;
-  scale: 1;
 }
 
 .title {
